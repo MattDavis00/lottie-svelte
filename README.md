@@ -1,38 +1,58 @@
-# create-svelte
+# lottie-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A very simple Svetle wrapper around `lottie-web`, made with TypeScript.
 
-## Creating a project
+Exposes the underlying `lottie-web` API if you need it.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Programatically control animations.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
+___
+
+## Example:
+```
+<script>
+    import Lottie from 'lottie-svelte';
+</script>
+
+<Lottie path="./love.json" />
 ```
 
-## Developing
+Common properties available via props.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```
+<Lottie path="./love.json" autoplay={true} loop={false} />
 ```
 
-## Building
+## Lottie component props:
 
-To create a production version of your app:
+| Prop | type | required | description |
+| --- | --- | --- | --- |
+| path | string | ✅ required | The path to the lottie file, relative to the static directory. E.g. for a lottie file located at `static/lottie/heart.json`, you would pass in `./lottie/heart.json` to this prop. |
+| container | HTMLElement | ⏩ optional | Under normal circumstances don't use this prop. A reference to an element where the lottie will be created. If left blank lottie-svelte will create one for you. |
+| renderer | RendererType | ⏩ optional | How the lottie is rendered, one of `'svg'` `'canvas'` `'html'`. Default is `'svg'` |
+| loop | boolean | ⏩ optional | Whether the lottie should loop when it finishes. Default `true`. |
+| autoplay | boolean | ⏩ optional | Whether the lottie should autoplay once it loads. Default `true`. |
+| name | string | ⏩ optional | Sometimes required by the underlying `lottie-web` functions. You may need to set this if you are calling underlying certain methods on the AnimationItem  |
 
-```bash
-npm run build
+## Programatically control animation:
+
+We provide a convenient event that fires once the lottie animation has loaded `on:animation`.
+From this event you can get the underlying animation and control its speed, direction, frame and much more.
+You can find the [supported AnimationItem methods here](https://www.npmjs.com/package/lottie-web#usage)
+
 ```
+<script lang="ts">
+	import { Lottie, type AnimationEvent } from 'lottie-svelte';
 
-You can preview the production build with `npm run preview`.
+	function handler(event: AnimationEvent) {
+		const animation = event.detail; // lottie-web AnimationItem
+		animation.setSpeed(0.2);
+		setTimeout(() => animation.pause(), 2000);
+	}
+</script>
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+<!-- Lottie file is located at static/love.json -->
+<Lottie path="./love.json" on:animation={handler} />
+
+```

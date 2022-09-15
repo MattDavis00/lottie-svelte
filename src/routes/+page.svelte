@@ -1,3 +1,14 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import type { AnimationItem } from 'lottie-web';
+	import Lottie from '$lib/Lottie.svelte';
+	import type { AnimationEvent } from '$lib/index.js';
+
+	function loadHandler(event: AnimationEvent) {
+		const animation = event.detail;
+		animation.setSpeed(0.1);
+		setTimeout(() => animation.pause(), 2000);
+	}
+</script>
+
+<div>Heart example</div>
+<Lottie path="heart.json" on:animation={loadHandler} />

@@ -9,6 +9,10 @@ const config = {
 
 	kit: {
 		adapter: adapter()
+	},
+	package: {
+		emitTypes: true,
+		// exports: (filepath) => /.*.ts$/.test(filepath)
 	}
 };
 
