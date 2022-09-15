@@ -41,7 +41,6 @@
 			name
 		});
 		animation.addEventListener('DOMLoaded', () => {
-			console.log(animation.isLoaded);
 			dispatch('animation', animation);
 		});
 	});
