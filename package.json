@@ -33,5 +33,5 @@
 	"dependencies": {
 		"lottie-web": "^5.9.6"
 	},
-	"main": "index.js"
+	"main": "package/index.js"
 }
