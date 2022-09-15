@@ -11,6 +11,7 @@ const config = {
 		adapter: adapter()
 	},
 	package: {
+		dir: 'package',
 		emitTypes: true,
 		// exports: (filepath) => /.*.ts$/.test(filepath)
 	}
