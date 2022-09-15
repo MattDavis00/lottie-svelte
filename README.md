@@ -28,12 +28,12 @@ Common properties available via props.
 
 | Prop | type | required | description |
 | --- | --- | --- | --- |
-| path | string | ✅ required | The path to the lottie file, relative to the static directory. E.g. for a lottie file located at `static/lottie/heart.json`, you would pass in `./lottie/heart.json` to this prop. |
-| container | HTMLElement | ⏩ optional | Under normal circumstances don't use this prop. A reference to an element where the lottie will be created. If left blank lottie-svelte will create one for you. |
-| renderer | RendererType | ⏩ optional | How the lottie is rendered, one of `'svg'` `'canvas'` `'html'`. Default is `'svg'` |
-| loop | boolean | ⏩ optional | Whether the lottie should loop when it finishes. Default `true`. |
-| autoplay | boolean | ⏩ optional | Whether the lottie should autoplay once it loads. Default `true`. |
-| name | string | ⏩ optional | Sometimes required by the underlying `lottie-web` functions. You may need to set this if you are calling underlying certain methods on the AnimationItem  |
+| path | string | ✅ | The path to the lottie file, relative to the static directory. E.g. for a lottie file located at `static/lottie/heart.json`, you would pass in `./lottie/heart.json` to this prop. |
+| container | HTMLElement | ⏩ | Under normal circumstances don't use this prop. A reference to an element where the lottie will be created. If left blank lottie-svelte will create one for you. |
+| renderer | RendererType | ⏩ | How the lottie is rendered, one of `'svg'` `'canvas'` `'html'`. Default is `'svg'` |
+| loop | boolean | ⏩ | Whether the lottie should loop when it finishes. Default `true`. |
+| autoplay | boolean | ⏩ | Whether the lottie should autoplay once it loads. Default `true`. |
+| name | string | ⏩ | Sometimes required by the underlying `lottie-web` functions. You may need to set this if you are calling underlying certain methods on the AnimationItem  |
 
 ## Programatically control animation:
 
