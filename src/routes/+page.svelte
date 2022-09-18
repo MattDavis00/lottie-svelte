@@ -1,7 +1,6 @@
 <script lang="ts">
-	import type { AnimationItem } from 'lottie-web';
 	import Lottie from '$lib/Lottie.svelte';
-	import type { AnimationEvent } from '$lib/index.js';
+	import { Direction, type AnimationEvent } from '$lib/index.js';
 
 	function loadHandler(event: AnimationEvent) {
 		const animation = event.detail;
@@ -11,4 +10,5 @@
 </script>
 
 <div>Heart example</div>
-<Lottie path="heart.json" on:animation={loadHandler} />
+<!-- <Lottie path="heart.json" on:animation={loadHandler} /> -->
+<Lottie path="heart.json" speed={0.2} direction={Direction.BACKWARDS} />
