@@ -10,7 +10,7 @@ Programatically control animations.
 ___
 
 ## Example:
-```
+```html
 <script>
     import Lottie from 'lottie-svelte';
 </script>
@@ -20,7 +20,7 @@ ___
 
 Common properties available via props.
 
-```
+```html
 <Lottie path="./love.json" autoplay={true} loop={false} />
 ```
 
@@ -41,7 +41,7 @@ We provide a convenient event that fires once the lottie animation has loaded `o
 From this event you can get the underlying animation and control its speed, direction, frame and much more.
 You can find the [supported AnimationItem methods here](https://www.npmjs.com/package/lottie-web#usage)
 
-```
+```html
 <script lang="ts">
 	import { Lottie, type AnimationEvent } from 'lottie-svelte';
 
