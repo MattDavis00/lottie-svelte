@@ -53,16 +53,16 @@ You can find the [supported AnimationItem methods here](https://www.npmjs.com/pa
 
 ```html
 <script lang="ts">
-	import { Lottie, type AnimationEvent } from 'lottie-svelte';
+	import { Lottie } from 'lottie-svelte';
+	import type { AnimationEvent } from 'lottie-svelte/iface';
 
 	function handler(event: AnimationEvent) {
 		const animation = event.detail; // lottie-web AnimationItem
 		animation.setSpeed(0.2);
-		setTimeout(() => animation.pause(), 2000);
+		setTimeout(() => animation.pause(), 1500);
 	}
 </script>
 
-<!-- Lottie file is located at static/love.json -->
-<Lottie path="./love.json" on:animation={handler} />
-
+<!-- Lottie file is located at static/heart.json -->
+<Lottie path="./heart.json" on:animation={handler} />
 ```
