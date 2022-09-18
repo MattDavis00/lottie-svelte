@@ -4,7 +4,7 @@ A very simple Svetle wrapper around `lottie-web`, made with TypeScript.
 
 Exposes the underlying `lottie-web` API if you need it.
 
-Programatically control animations.
+Programmatically control animations.
 
 
 ___
@@ -35,7 +35,7 @@ Common properties available via props.
 | autoplay | boolean | ⏩ | Whether the lottie should autoplay once it loads. Default `true`. |
 | name | string | ⏩ | Sometimes required by the underlying `lottie-web` functions. You may need to set this if you are calling underlying certain methods on the AnimationItem  |
 
-## Programatically control animation:
+## Programmatically control animation:
 
 We provide a convenient event that fires once the lottie animation has loaded `on:animation`.
 From this event you can get the underlying animation and control its speed, direction, frame and much more.
