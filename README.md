@@ -6,10 +6,9 @@ Exposes the underlying `lottie-web` API if you need it.
 
 Programmatically control animations.
 
+<br/>
 
-___
-
-## Example:
+## Example #1:
 ```html
 <script>
     import Lottie from 'lottie-svelte';
@@ -19,6 +18,10 @@ ___
 ```
 
 <img src="https://i.imgur.com/RhqPwr7.gif" height=100 width=100 alt="Animated heart GIF (Forward)"/>
+
+<br/>
+
+## Example #2:
 
 Common properties available via props.
 
@@ -30,6 +33,8 @@ Common properties available via props.
 https://codesandbox.io/embed/vigilant-resonance-jmoh1q?fontsize=14&hidenavigation=1&theme=dark
 
 <a href="https://codesandbox.io/s/vigilant-resonance-jmoh1q?fontsize=14&hidenavigation=1&theme=dark"> <img alt="Edit jmoh1q" src="https://codesandbox.io/static/img/play-codesandbox.svg"> </a>
+
+<br/>
 
 ## Lottie component props:
 
@@ -44,6 +49,7 @@ https://codesandbox.io/embed/vigilant-resonance-jmoh1q?fontsize=14&hidenavigatio
 | renderer | RendererType | ⏩ | How the lottie is rendered, one of `'svg'` `'canvas'` `'html'`. Default is `'svg'` |
 | container | HTMLElement | ⏩ | Under normal circumstances don't use this prop. A reference to an element where the lottie will be created. If left blank lottie-svelte will create one for you. |
 
+<br/>
 
 ## Programmatically control animation:
 
