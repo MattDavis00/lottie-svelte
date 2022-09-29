@@ -11,7 +11,7 @@ Programmatically control animations.
 ## Example #1:
 ```html
 <script>
-    import Lottie from 'lottie-svelte';
+    import { Lottie } from 'lottie-svelte';
 </script>
 
 <Lottie path="./love.json" speed={0.2}/>
