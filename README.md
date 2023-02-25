@@ -26,13 +26,24 @@ Programmatically control animations.
 Common properties available via props.
 
 ```html
-<Lottie path="./love.json" autoplay={true} loop={false} speed={0.2} direction={Direction.REVERSE}/>
+<script>
+    import { Lottie } from 'lottie-svelte';
+    import { Direction } from 'lottie-svelte/iface';
+</script>
+
+<Lottie
+    path="./love.json"
+    autoplay={true}
+    loop={false}
+    speed={0.2}
+    direction={Direction.REVERSE}
+/>
 ```
 <img src="https://i.imgur.com/BsdmKmz.gif" height=100 width=100 alt="Animated heart GIF (Reverse)"/>
 
-https://codesandbox.io/embed/vigilant-resonance-jmoh1q?fontsize=14&hidenavigation=1&theme=dark
+https://codesandbox.io/s/nostalgic-dust-tf7nbm?file=/App.svelte
 
-<a href="https://codesandbox.io/s/vigilant-resonance-jmoh1q?fontsize=14&hidenavigation=1&theme=dark"> <img alt="Edit jmoh1q" src="https://codesandbox.io/static/img/play-codesandbox.svg"> </a>
+<a href="https://codesandbox.io/s/nostalgic-dust-tf7nbm?file=/App.svelte"> <img alt="Edit tf7nbm" src="https://codesandbox.io/static/img/play-codesandbox.svg"> </a>
 
 <br/>
 
