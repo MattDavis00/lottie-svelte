@@ -19,6 +19,8 @@ Programmatically control animations.
 
 <img src="https://i.imgur.com/RhqPwr7.gif" height=100 width=100 alt="Animated heart GIF (Forward)"/>
 
+https://stackblitz.com/edit/vitejs-vite-59zcbv?file=src/App.svelte
+
 <br/>
 
 ## Example #2:
@@ -41,9 +43,7 @@ Common properties available via props.
 ```
 <img src="https://i.imgur.com/BsdmKmz.gif" height=100 width=100 alt="Animated heart GIF (Reverse)"/>
 
-https://codesandbox.io/s/nostalgic-dust-tf7nbm?file=/App.svelte
-
-<a href="https://codesandbox.io/s/nostalgic-dust-tf7nbm?file=/App.svelte"> <img alt="Edit tf7nbm" src="https://codesandbox.io/static/img/play-codesandbox.svg"> </a>
+https://stackblitz.com/edit/vitejs-vite-wtauwm?file=src/App.svelte
 
 <br/>
 
@@ -83,3 +83,7 @@ You can find the [supported AnimationItem methods here](https://www.npmjs.com/pa
 <!-- Lottie file is located at static/heart.json -->
 <Lottie path="./heart.json" on:animation={handler} />
 ```
+
+https://stackblitz.com/edit/vitejs-vite-o6z51r?file=src/App.svelte
+
+<br/>
