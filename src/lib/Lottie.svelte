@@ -4,6 +4,10 @@
 	// import type { RendererType } from 'lottie-web';
 	import { createEventDispatcher, onMount } from 'svelte';
 
+    /**
+     * Sets the HTML ID of the lottie container. Recommended to leave blank and a UUID will be generated, must be unique.
+     */
+    export let id: string = crypto.randomUUID()
 	/**
 	 * Path to the .json lottie file. Place .json files in the static directory, like 'static/heart.json', then reference using 'heart.json'
 	 */
@@ -38,12 +42,11 @@
 	 */
 	export let direction: Direction = Direction.FORWARD;
 
-	const uuid = crypto.randomUUID();
 	const dispatch = createEventDispatcher<{ animation: AnimationItem }>();
 
 	onMount(() => {
 		const animation: AnimationItem = lottie.loadAnimation({
-			container: container || document.getElementById(uuid)!,
+			container: container || document.getElementById(id)!,
 			path,
 			renderer: renderer || 'svg',
 			loop,
@@ -58,4 +61,4 @@
 	});
 </script>
 
-<div id={uuid} />
+<div id={id} {...$$restProps}/>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Lottie from '$lib/Lottie.svelte';
-	import { Direction, type AnimationEvent } from '$lib/index.js';
+	import { Direction, type AnimationEvent } from '$lib/iface.js';
 
 	function loadHandler(event: AnimationEvent) {
 		const animation = event.detail;
@@ -10,5 +10,5 @@
 </script>
 
 <div>Heart example</div>
-<!-- <Lottie path="heart.json" on:animation={loadHandler} /> -->
-<Lottie path="heart.json" speed={0.2} direction={Direction.BACKWARDS} />
+<Lottie style="width: 100px" path="heart.json" on:animation={loadHandler} />
+<Lottie style="width: 100px" path="heart.json" speed={0.2} direction={Direction.BACKWARDS} />
