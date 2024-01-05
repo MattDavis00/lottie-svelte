@@ -58,6 +58,10 @@
 			animation.setDirection(direction);
 			dispatch('animation', animation);
 		});
+
+		return () => {
+			animation.destroy()
+		}
 	});
 </script>
 
